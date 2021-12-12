@@ -18,10 +18,12 @@ int main()
         cout << ("Введите a "); cin >> a;
         cout << ("Введите b "); cin >> b;
         cout << ("Введите h "); cin >> h;
-        if (((a < b) && ( h > 0))||((a > b) && (h < 0)))
+        if (((a < b) && (h > 0)) || ((a > b) && (h < 0)))
         {
             flag = true;
         }
+        else
+            cout << "wrong numbers";
     }
     double x = a;
     while ((x < (b-0.00001)) || (x > (b + 0.00001)))
@@ -53,5 +55,9 @@ int main()
         double y;
         y = abs((x * x * x) - 1 / sqrt(3) - log(1.37 * 1.37 * 1.37 + x * x * x * x * x) + 4 / x);
         cout << x << ' ' << y << '\n';
+    }
+    else
+    {
+        cout << x << " y doesn't exist" << '\n';
     }
 }
